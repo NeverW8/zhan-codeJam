@@ -19,7 +19,6 @@ def get_unique_coding_ideas(prompt, num_ideas=50):
         ideas = response.choices[0].text.strip().split("\n")
         for idea in ideas:
             unique_ideas.add(idea.strip())
-        # Remove empty strings if any
         unique_ideas.discard("")
     return list(unique_ideas)[:num_ideas]
 
