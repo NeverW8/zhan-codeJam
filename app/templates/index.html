@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team zHan Code Jam</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <button id="getData">click!</button>
+    <div class="logo">Team zHan Code Jam</div>
+    <canvas id="wheelCanvas" width="500" height="500"></canvas>
+    <button id="spinButton">Spin the Wheel</button>
+    <div id="winnerContainer">
+        <div id="winnerName"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.3/dist/confetti.browser.min.js"></script>
+    <script defer src="{{url_for('static', filename='script.js')}}"></script>
+</body>
+</html>
+
