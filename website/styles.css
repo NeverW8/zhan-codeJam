@@ -1,0 +1,84 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #282c34;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.logo {
+    font-size: 3rem;
+    color: #fff;
+    animation: float 3s ease-in-out infinite, colorChange 5s linear infinite;
+    margin-bottom: 20px;
+}
+
+#wheelCanvas {
+    margin: 20px 0;
+}
+
+#spinButton {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: #61dafb;
+    border: none;
+    border-radius: 5px;
+    color: #282c34;
+}
+
+#winnerContainer {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1000;
+}
+
+#winnerName {
+    font-size: 5rem;
+    color: #fff;
+    animation: popUp 0.5s ease-out forwards;
+}
+
+@keyframes popUp {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        color: #ff0000;
+    }
+    25% {
+        color: #00ff00;
+    }
+    50% {
+        color: #0000ff;
+    }
+    75% {
+        color: #ff00ff;
+    }
+    100% {
+        color: #ff0000;
+    }
+}
+
